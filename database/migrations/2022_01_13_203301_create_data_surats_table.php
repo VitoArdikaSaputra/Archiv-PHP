@@ -16,6 +16,7 @@ class CreateDataSuratsTable extends Migration
         Schema::create('data_surats', function (Blueprint $table) {
             $table->bigIncrements('id');
             // $table->string('slug')->nullable();
+            $table->string('file');
             $table->string('nama_file')->nullable();
             $table->string('file_path')->nullable();
             $table->string('nomor_surat');
@@ -29,10 +30,10 @@ class CreateDataSuratsTable extends Migration
             $table->date('tanggal_akuisisi')->nullable();
             $table->string('sumber_akuisisi')->nullable();
             // $table->tinyInteger('status_ketersediaan');
-            // $table->foreignId('file_surat_id')->constrained('file_surats');
-            // $table->foreignId('jenis_surat_id')->constrained('jenis_surats');
             $table->tinyInteger('access_level')->nullable();
             $table->timestamps();
+            // $table->foreignId('file_surat_id')->constrained('file_surats');
+            // $table->foreignId('jenis_surat_id')->constrained('jenis_surats');
 
         });
 

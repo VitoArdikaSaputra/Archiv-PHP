@@ -11,6 +11,7 @@ class data_surat extends Model
     // use HasFactory;
     protected $fillable = [
         'id',
+        'file',
         'nama_file',
         'file_path',
         'nama_surat',
